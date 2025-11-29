@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Formulario tarea</title></head>
+<body>
+    <h1>{% if form.instance.pk %}Editar{% else %}Nueva{% endif %} tarea</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'lista_tareas' %}">Volver</a>
+</body>
+</html>

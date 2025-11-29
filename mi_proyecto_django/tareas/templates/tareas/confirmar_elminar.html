@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Eliminar tarea</title></head>
+<body>
+    <h1>¿Eliminar tarea "{{ object.titulo }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sí, eliminar</button>
+        <a href="{% url 'lista_tareas' %}">Cancelar</a>
+    </form>
+</body>
+</html>
